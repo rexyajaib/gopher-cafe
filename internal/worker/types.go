@@ -59,8 +59,8 @@ type ExecuteBrewResult struct {
 
 type Step struct {
 	EquipmentType string
-	Start         int64
-	End           int64
+	StartMs       int64
+	EndMs         int64
 }
 
 func buildStepsFromProto(steps []*gophercafepb.Step) []Step {
@@ -68,8 +68,8 @@ func buildStepsFromProto(steps []*gophercafepb.Step) []Step {
 	for i, step := range steps {
 		result[i] = Step{
 			EquipmentType: step.GetEquipment().String(),
-			Start:         step.Start,
-			End:           step.End,
+			StartMs:       step.StartMs,
+			EndMs:         step.EndMs,
 		}
 	}
 	return result
