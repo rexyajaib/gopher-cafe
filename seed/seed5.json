@@ -1,0 +1,9 @@
+{
+  "baristas": 2,
+  "orders": [
+    {"id": 1, "drink": "Latte"},
+    {"id": 2, "drink": "Latte"},
+    {"id": 3, "drink": "Latte"},
+    {"id": 4, "drink": "Latte"}
+  ]
+}

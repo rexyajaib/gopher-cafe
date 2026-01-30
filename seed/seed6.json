@@ -1,0 +1,14 @@
+{
+  "baristas": 3,
+  "orders": [
+    {"id": 1, "drink": "Frappe"},
+    {"id": 2, "drink": "Frappe"},
+    {"id": 3, "drink": "Frappe"},
+    {"id": 4, "drink": "Matcha"},
+    {"id": 5, "drink": "Matcha"},
+    {"id": 6, "drink": "Latte"},
+    {"id": 7, "drink": "Latte"},
+    {"id": 8, "drink": "Espresso"},
+    {"id": 9, "drink": "Espresso"}
+  ]
+}

@@ -20,6 +20,8 @@ enum DrinkType {
   DRINK_TYPE_MATCHA = 4;
 }
 
+message GetStatsRequest {}
+
 message GetStatsResponse {
   int64 total_request_processed = 1;
   int64 total_processing_milliseconds = 2;
@@ -48,4 +50,9 @@ message Step {
   EquipmentType equipment = 1;
   int64 start = 2;
   int64 end = 3;
+}
+
+service GopherCafeService {
+  rpc ExecuteBrew(ExecuteBrewRequest) returns (ExecuteBrewResponse);
+  rpc GetStats(GetStatsRequest) returns (GetStatsResponse);
 }

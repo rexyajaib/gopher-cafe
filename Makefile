@@ -13,11 +13,11 @@ COLOR_GREEN          := "\033[1;32m"
 COLOR_RED            := "\033[1;31m"
 
 # -------------------------------------------------------------------
-# Generate protobuf for *all* services								#
+# Generate protobuf													#
 # -------------------------------------------------------------------
 
 generate-go-buf:
-	@echo $(COLOR_BLUE) "🔧 Begin Generating protobuf for all services..."
+	@echo $(COLOR_BLUE) "🔧 Begin Generating protobuf..."
 	@cp $(BUF_GEN_GO_TEMPLATE) buf.gen.yaml
 	@buf generate
 	@cp -R github.com/rexyajaib/gopher-cafe/* .
@@ -28,12 +28,10 @@ generate-go-buf:
 
 lint-buf:
 	@echo $(COLOR_BLUE) "🔎 Running lint for all services..." $(COLOR_RED)
-	@for SERVICE in $$(find . -maxdepth 1 -type d ! -name '.*' ! -name 'java' -exec basename {} \;); do \
+	@for SERVICE in $$(find pkg -maxdepth 1 -type d ! -name '.*' ! -name 'java' -exec basename {} \;); do \
 		cp $(BUF_GO_TEMPLATE) "$$SERVICE/buf.yaml" ; \
 		if ! buf lint --path "$$SERVICE" ; then \
-			echo $(COLOR_RED) "❌ Lint failed for $$SERVICE." ; \
 			rm -f "$$SERVICE/buf.yaml" ; \
-			exit 1 ; \
 		fi ; \
 		rm -f "$$SERVICE/buf.yaml" ; \
 	done

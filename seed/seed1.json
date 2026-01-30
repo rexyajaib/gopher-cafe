@@ -1,0 +1,7 @@
+{
+  "baristas": 2,
+  "orders": [
+    {"id": 1, "drink": "Espresso"},
+    {"id": 2, "drink": "Espresso"}
+  ]
+}
