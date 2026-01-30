@@ -1,0 +1,51 @@
+syntax = "proto3";
+package pkg.proto.v1;
+
+option go_package = "github.com/rexyajaib/gopher-cafe/pkg/gen/go/v1;gophercafepb";
+
+enum EquipmentType {
+  EQUIPMENT_TYPE_UNSPECIFIED = 0;
+  EQUIPMENT_TYPE_ESPRESSO_MACHINE = 1;
+  EQUIPMENT_TYPE_GRINDER = 2;
+  EQUIPMENT_TYPE_MILK_STEAMER = 3;
+  EQUIPMENT_TYPE_BLENDER = 4;
+  EQUIPMENT_TYPE_WHISK = 5;
+}
+
+enum DrinkType {
+  DRINK_TYPE_UNSPECIFIED = 0;
+  DRINK_TYPE_ESPRESSO = 1;
+  DRINK_TYPE_LATTE = 2;
+  DRINK_TYPE_FRAPPE = 3;
+  DRINK_TYPE_MATCHA = 4;
+}
+
+message GetStatsResponse {
+  int64 total_request_processed = 1;
+  int64 total_processing_milliseconds = 2;
+}
+
+message ExecuteBrewRequest {
+  int32 baristas = 1;
+  repeated Order orders = 2;
+}
+
+message Order {
+  int64 id = 1;
+  DrinkType drink = 2;
+}
+
+message ExecuteBrewResponse {
+  repeated Result results = 1;
+}
+
+message Result {
+  int64 order_id = 1;
+  repeated Step steps = 2;
+}
+
+message Step {
+  EquipmentType equipment = 1;
+  int64 start = 2;
+  int64 end = 3;
+}
