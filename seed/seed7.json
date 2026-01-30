@@ -1,13 +1,18 @@
 {
-  "baristas": 5,
-  "orders": [
-    {"id":1,"drink":"Espresso"}, {"id":2,"drink":"Espresso"}, {"id":3,"drink":"Espresso"},
-    {"id":4,"drink":"Espresso"}, {"id":5,"drink":"Espresso"}, {"id":6,"drink":"Espresso"},
-    {"id":7,"drink":"Latte"}, {"id":8,"drink":"Latte"}, {"id":9,"drink":"Latte"},
-    {"id":10,"drink":"Latte"}, {"id":11,"drink":"Latte"},
-    {"id":12,"drink":"Frappe"}, {"id":13,"drink":"Frappe"}, {"id":14,"drink":"Frappe"}, {"id":15,"drink":"Frappe"},
-    {"id":16,"drink":"Matcha"}, {"id":17,"drink":"Matcha"}, {"id":18,"drink":"Matcha"}, {"id":19,"drink":"Matcha"}, {"id":20,"drink":"Matcha"}
+  "requests": [
+    {
+      "baristas": 5,
+      "orders": [
+        {"id":1,"drink":"Espresso"}, {"id":2,"drink":"Espresso"}, {"id":3,"drink":"Espresso"},
+        {"id":4,"drink":"Espresso"}, {"id":5,"drink":"Espresso"}, {"id":6,"drink":"Espresso"},
+        {"id":7,"drink":"Latte"}, {"id":8,"drink":"Latte"}, {"id":9,"drink":"Latte"},
+        {"id":10,"drink":"Latte"}, {"id":11,"drink":"Latte"},
+        {"id":12,"drink":"Frappe"}, {"id":13,"drink":"Frappe"}, {"id":14,"drink":"Frappe"}, {"id":15,"drink":"Frappe"},
+        {"id":16,"drink":"Matcha"}, {"id":17,"drink":"Matcha"}, {"id":18,"drink":"Matcha"}, {"id":19,"drink":"Matcha"}, {"id":20,"drink":"Matcha"}
+      ]
+    }
   ],
-  "delayMs": 1000,
-  "loopCount": 1
+  "runningDurationMs": 1000,
+  "pauseDurationMs": 5000,
+  "enableLogging": true
 }

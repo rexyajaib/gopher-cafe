@@ -1,6 +1,7 @@
 package main
 
 import (
+	"github.com/rexyajaib/gopher-cafe/internal/domain/model"
 	"github.com/rexyajaib/gopher-cafe/internal/worker"
 	"os"
 )
@@ -25,7 +26,7 @@ func main() {
 		panic(err)
 	}
 
-	seed, err := worker.ParseSeedRequest(data)
+	seed, err := model.ParseSeed(data)
 	if err != nil {
 		panic(err)
 	}

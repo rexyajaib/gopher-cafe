@@ -1,11 +1,16 @@
 {
-  "baristas": 2,
-  "orders": [
-    {"id": 1, "drink": "Latte"},
-    {"id": 2, "drink": "Latte"},
-    {"id": 3, "drink": "Latte"},
-    {"id": 4, "drink": "Latte"}
+  "requests": [
+    {
+      "baristas": 2,
+      "orders": [
+        {"id": 1, "drink": "Latte"},
+        {"id": 2, "drink": "Latte"},
+        {"id": 3, "drink": "Latte"},
+        {"id": 4, "drink": "Latte"}
+      ]
+    }
   ],
-  "delayMs": 1000,
-  "loopCount": 1
+  "runningDurationMs": 1000,
+  "pauseDurationMs": 5000,
+  "enableLogging": true
 }
