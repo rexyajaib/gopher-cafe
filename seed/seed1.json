@@ -3,5 +3,7 @@
   "orders": [
     {"id": 1, "drink": "Espresso"},
     {"id": 2, "drink": "Espresso"}
-  ]
+  ],
+  "delayMs": 1000,
+  "loopCount": 1
 }

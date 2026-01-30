@@ -5,5 +5,7 @@
     {"id": 2, "drink": "Espresso"},
     {"id": 3, "drink": "Espresso"},
     {"id": 4, "drink": "Espresso"}
-  ]
+  ],
+  "delayMs": 1000,
+  "loopCount": 1
 }

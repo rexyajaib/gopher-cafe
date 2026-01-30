@@ -11,8 +11,10 @@ type TaskWorker struct {
 }
 
 type SeedRequest struct {
-	Baristas int     `json:"baristas"`
-	Orders   []Order `json:"orders"`
+	Baristas  int     `json:"baristas"`
+	Orders    []Order `json:"orders"`
+	DelayMs   int     `json:"delayMs"`
+	LoopCount int     `json:"loopCount"`
 }
 
 func ParseSeedRequest(data []byte) (SeedRequest, error) {
@@ -30,8 +32,8 @@ type Order struct {
 }
 
 type GetStatsResponse struct {
-	TotalRequestProcessed       int `json:"total_request_processed"`
-	TotalProcessingMilliseconds int `json:"total_processing_milliseconds"`
+	TotalRequestProcessed       int64
+	TotalProcessingMilliseconds int64
 }
 
 type ExecuteBrewResponse struct {

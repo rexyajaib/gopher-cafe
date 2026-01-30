@@ -6,6 +6,7 @@ import (
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
 	"log"
+	"time"
 )
 
 func NewTaskWorker(seedRequest SeedRequest, address string) *TaskWorker {
@@ -23,24 +24,31 @@ func NewTaskWorker(seedRequest SeedRequest, address string) *TaskWorker {
 }
 
 func (tw *TaskWorker) Start() {
-	ctx := context.Background()
-	request := buildExecuteBrewRequest(tw.SeedRequest)
+	for i := 0; i < tw.SeedRequest.LoopCount; i++ {
+		ctx := context.Background()
+		request := buildExecuteBrewRequest(tw.SeedRequest)
 
-	//  Call RPC to gopher cafe service to execute brew
-	executeResponse, err := tw.gopherCafeServiceClient.ExecuteBrew(ctx, &request)
-	if err != nil {
-		log.Fatal(err)
+		//  Call RPC to gopher cafe service to execute brew
+		executeResponse, err := tw.gopherCafeServiceClient.ExecuteBrew(ctx, &request)
+		if err != nil {
+			log.Fatal(err)
+		}
+
+		log.Printf("Brew Execution Response: %v", ExecuteBrewResponseFromProto(executeResponse))
+
+		// GetStats RPC call to get stats
+		response, err := tw.gopherCafeServiceClient.GetStats(ctx, &gophercafepb.GetStatsRequest{})
+		if err != nil {
+			log.Fatal(err)
+		}
+
+		log.Printf("Gopher Cafe Stats: %v", GetStatsResponse{
+			TotalRequestProcessed:       response.GetTotalRequestProcessed(),
+			TotalProcessingMilliseconds: response.GetTotalProcessingMilliseconds(),
+		})
+
+		time.Sleep(time.Millisecond * time.Duration(tw.SeedRequest.DelayMs))
 	}
-
-	log.Printf("Brew Execution Response: %v", ExecuteBrewResponseFromProto(executeResponse))
-
-	// GetStats RPC call to get stats
-	response, err := tw.gopherCafeServiceClient.GetStats(ctx, &gophercafepb.GetStatsRequest{})
-	if err != nil {
-		log.Fatal(err)
-	}
-
-	log.Printf("Gopher Cafe Stats: %v", response)
 }
 
 func buildExecuteBrewRequest(request SeedRequest) gophercafepb.ExecuteBrewRequest {
