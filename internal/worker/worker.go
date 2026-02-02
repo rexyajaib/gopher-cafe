@@ -58,8 +58,8 @@ loop:
 	}
 
 	log.Printf("Gopher Cafe Stats: %v", model.GetStatsResponse{
-		TotalRequestProcessed:       response.GetTotalRequestProcessed(),
-		TotalProcessingMilliseconds: response.GetTotalProcessingMilliseconds(),
+		TotalRequestProcessed:     response.GetTotalRequestProcessed(),
+		P90ProcessingMilliseconds: response.GetP90ProcessingMilliseconds(),
 	})
 
 	log.Printf("task worker stopped")

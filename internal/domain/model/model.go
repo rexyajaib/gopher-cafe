@@ -32,8 +32,8 @@ type Order struct {
 }
 
 type GetStatsResponse struct {
-	TotalRequestProcessed       int64
-	TotalProcessingMilliseconds int64
+	TotalRequestProcessed     int64
+	P90ProcessingMilliseconds int64
 }
 
 type ExecuteBrewResponse struct {

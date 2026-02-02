@@ -24,7 +24,7 @@ message GetStatsRequest {}
 
 message GetStatsResponse {
   int64 total_request_processed = 1;
-  int64 total_processing_milliseconds = 2;
+  int64 p90_processing_milliseconds = 2;
 }
 
 message ExecuteBrewRequest {
