@@ -7,6 +7,24 @@
         {"id": 2, "drink": "Latte"},
         {"id": 3, "drink": "Matcha"}
       ]
+    },
+    {
+      "baristas": 4,
+      "orders": [
+        {"id":1,"drink":"Matcha"}, {"id":2,"drink":"Espresso"}, {"id":3,"drink":"Espresso"},
+        {"id":4,"drink":"Espresso"}, {"id":5,"drink":"Frappe"}, {"id":6,"drink":"Espresso"},
+        {"id":7,"drink":"Latte"}, {"id":8,"drink":"Latte"}, {"id":9,"drink":"Matcha"},
+        {"id":10,"drink":"Latte"}, {"id":11,"drink":"Latte"}
+      ]
+    },
+    {
+      "baristas": 2,
+      "orders": [
+        {"id":1,"drink":"Espresso"}, {"id":2,"drink":"Espresso"}, {"id":3,"drink":"Latte"},
+        {"id":4,"drink":"Matcha"}, {"id":5,"drink":"Espresso"}, {"id":6,"drink":"Espresso"},
+        {"id":7,"drink":"Latte"}, {"id":8,"drink":"Frappe"}, {"id":9,"drink":"Latte"},
+        {"id":10,"drink":"Matcha"}, {"id":11,"drink":"Latte"}
+      ]
     }
   ],
   "runningDurationMs": 1000,

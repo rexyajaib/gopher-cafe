@@ -8,6 +8,221 @@
         {"id": 3, "drink": "Espresso"},
         {"id": 4, "drink": "Espresso"}
       ]
+    },
+    {
+      "baristas": 2,
+      "orders": [
+        {
+          "id": 1,
+          "drink": "Espresso"
+        },
+        {
+          "id": 2,
+          "drink": "Latte"
+        },
+        {
+          "id": 3,
+          "drink": "Latte"
+        },
+        {
+          "id": 4,
+          "drink": "Espresso"
+        },
+        {
+          "id": 5,
+          "drink": "Espresso"
+        }
+      ]
+    },
+    {
+      "baristas": 9,
+      "orders": [
+        {
+          "id": 1,
+          "drink": "Frappe"
+        },
+        {
+          "id": 2,
+          "drink": "Latte"
+        },
+        {
+          "id": 3,
+          "drink": "Espresso"
+        },
+        {
+          "id": 4,
+          "drink": "Frappe"
+        },
+        {
+          "id": 5,
+          "drink": "Matcha"
+        },
+        {
+          "id": 6,
+          "drink": "Latte"
+        },
+        {
+          "id": 7,
+          "drink": "Latte"
+        },
+        {
+          "id": 8,
+          "drink": "Matcha"
+        },
+        {
+          "id": 9,
+          "drink": "Latte"
+        },
+        {
+          "id": 10,
+          "drink": "Frappe"
+        },
+        {
+          "id": 11,
+          "drink": "Espresso"
+        },
+        {
+          "id": 12,
+          "drink": "Matcha"
+        },
+        {
+          "id": 13,
+          "drink": "Latte"
+        },
+        {
+          "id": 14,
+          "drink": "Latte"
+        },
+        {
+          "id": 15,
+          "drink": "Frappe"
+        },
+        {
+          "id": 16,
+          "drink": "Matcha"
+        },
+        {
+          "id": 17,
+          "drink": "Matcha"
+        },
+        {
+          "id": 18,
+          "drink": "Latte"
+        },
+        {
+          "id": 19,
+          "drink": "Latte"
+        },
+        {
+          "id": 20,
+          "drink": "Matcha"
+        },
+        {
+          "id": 21,
+          "drink": "Espresso"
+        },
+        {
+          "id": 22,
+          "drink": "Espresso"
+        },
+        {
+          "id": 23,
+          "drink": "Matcha"
+        },
+        {
+          "id": 24,
+          "drink": "Espresso"
+        },
+        {
+          "id": 25,
+          "drink": "Espresso"
+        },
+        {
+          "id": 26,
+          "drink": "Frappe"
+        },
+        {
+          "id": 27,
+          "drink": "Frappe"
+        },
+        {
+          "id": 28,
+          "drink": "Espresso"
+        },
+        {
+          "id": 29,
+          "drink": "Espresso"
+        },
+        {
+          "id": 30,
+          "drink": "Matcha"
+        },
+        {
+          "id": 31,
+          "drink": "Frappe"
+        },
+        {
+          "id": 32,
+          "drink": "Frappe"
+        },
+        {
+          "id": 33,
+          "drink": "Matcha"
+        },
+        {
+          "id": 34,
+          "drink": "Frappe"
+        },
+        {
+          "id": 35,
+          "drink": "Espresso"
+        },
+        {
+          "id": 36,
+          "drink": "Matcha"
+        },
+        {
+          "id": 37,
+          "drink": "Matcha"
+        }
+      ]
+    },
+    {
+      "baristas": 10,
+      "orders": [
+        {
+          "id": 1,
+          "drink": "Latte"
+        },
+        {
+          "id": 2,
+          "drink": "Latte"
+        },
+        {
+          "id": 3,
+          "drink": "Matcha"
+        },
+        {
+          "id": 4,
+          "drink": "Frappe"
+        },
+        {
+          "id": 5,
+          "drink": "Matcha"
+        },
+        {
+          "id": 6,
+          "drink": "Latte"
+        },
+        {
+          "id": 7,
+          "drink": "Espresso"
+        },
+        {
+          "id": 8,
+          "drink": "Matcha"
+        }
+      ]
     }
   ],
   "runningDurationMs": 1000,
