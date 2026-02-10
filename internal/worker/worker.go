@@ -33,6 +33,7 @@ func NewTaskWorker(seedRequest model.Seed, address string) *TaskWorker {
 }
 
 func (tw *TaskWorker) Start() {
+	totalRequests := 0
 	tw.initCtx = context.Background()
 
 	duration := time.Millisecond * time.Duration(tw.seed.RunningDurationMs)
@@ -45,7 +46,8 @@ loop:
 		case <-totalTimer.C:
 			break loop
 		default:
-			tw.worker()
+			go tw.worker()
+			totalRequests++
 			sleepMs := rand.Intn(tw.seed.PauseDurationMs) // 0..N
 			time.Sleep(time.Duration(sleepMs) * time.Millisecond)
 		}
@@ -61,6 +63,8 @@ loop:
 		TotalRequestProcessed:     response.GetTotalRequestProcessed(),
 		P90ProcessingMilliseconds: response.GetP90ProcessingMilliseconds(),
 	})
+
+	log.Printf("Gopher Cafe Total Requests Processed: %d", totalRequests)
 
 	log.Printf("task worker stopped")
 }
